@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreador NEO — Favoritos</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1><a href="../index.html" style="color: inherit; text-decoration: none;">Rastreador NEO</a></h1>
+    <nav>
+      <a href="../index.html">Resumen</a>
+      <a class="active" href="favoritos.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2>Mis asteroides favoritos</h2>
+
+    <div id="resumenFavoritos" class="kpi-grid">
+      <div class="card">Total favoritos: <strong id="totalFavoritos">0</strong></div>
+      <div class="card">Peligrosos: <strong id="peligrososFavoritos">0</strong></div>
+      <div class="card">Disponibles: <strong id="cargadosFavoritos">0</strong></div>
+    </div>
+
+    <div id="mensajeCargando" class="mensaje-cargando">
+      Cargando asteroides favoritos...
+    </div>
+
+    <div id="mensajeVacio" class="mensaje-vacio" style="display: none;">
+      <p>No tienes asteroides marcados como favoritos.</p>
+      <p>Ve a la página de <a href="../index.html">Resumen</a> y marca algunos asteroides con la estrella ★.</p>
+    </div>
+
+    <table class="ranking" aria-describedby="ranking-favoritos" id="tablaFavoritos" style="display: none;">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Favorito</th>
+          <th>Nombre</th>
+          <th>Tamaño máx (km)</th>
+          <th>Velocidad (km/h)</th>
+          <th>Distancia (km)</th>
+          <th>Peligroso</th>
+          <th>Ver detalles</th>
+        </tr>
+      </thead>
+      <tbody id="cuerpoTablaFavoritos"></tbody>
+    </table>
+  </main>
+
+  <footer class="footer">Tus asteroides favoritos guardados.</footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/main.js"></script>
+</body>
+</html>

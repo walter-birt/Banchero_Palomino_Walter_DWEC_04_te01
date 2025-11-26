@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreador NEO — Detalle</title>
+  <link rel="stylesheet" href="../css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+     <h1><a href="../index.html" style="color: inherit; text-decoration: none;">Rastreador NEO</a></h1>
+    <nav>
+      <a href="../index.html">Resumen</a>
+      <a class="active" href="favoritos.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h2 id="neoTitle">Detalle del asteroide</h2>
+    <div id="neoInfo" class="detail-grid"></div>
+
+    <div class="chart-controls">
+      <div class="controls-left">
+        <h3>Indicadores</h3>
+        <button id="btnDistancia" class="active">Distancia (km)</button>
+        <button id="btnVelocidad">Velocidad (km/h)</button>
+      </div>
+
+      <div class="controls-right">
+        <h3>Registros</h3>
+        <div class="period-buttons">
+          <button data-period="3">Últimos 3</button>
+          <button data-period="6">Últimos 6</button>
+          <button data-period="9">Últimos 9</button>
+          <button data-period="all" class="active">Todos</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- gráfico -->
+    <div class="chart-container">
+      <canvas id="neoChart"></canvas>
+    </div>
+  </main>
+
+  <footer class="footer">Datos proporcionados por NASA NeoWs</footer>
+
+  <!-- Chart.js (UMD global) -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src="../js/main.js" defer></script>
+</body>
+</html>
+

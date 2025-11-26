@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rastreador NEO — Resumen</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header class="topbar">
+    <h1>Rastreador NEO</h1>
+    <nav>
+      <a class="active" href="index.html">Resumen</a>
+      <a href="html/favoritos.html">Favoritos</a>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section>
+      <h2>Resumen de asteroides cercanos a la Tierra</h2>
+
+      <div class="filters">
+        <div class="period-buttons">
+          <button id="btnHoy" class="active">Hoy</button>
+          <button id="btnManana">Mañana</button>
+          <button id="btnProximaSemana">Próxima semana</button>
+        </div>
+
+        <div>
+          <label for="filtroPeligro">Peligrosos</label>
+          <select id="filtroPeligro">
+            <option value="all">Todos</option>
+            <option value="true">Solo peligrosos</option>
+            <option value="false">No peligrosos</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="filtroFavoritos">Favoritos</label>
+          <select id="filtroFavoritos">
+            <option value="all">Todos</option>
+            <option value="only">Solo favoritos</option>
+          </select>
+        </div>
+
+        <div>
+          <label for="ordenarPor">Orden</label>
+          <select id="ordenarPor">
+            <option value="size">Tamaño (km)</option>
+            <option value="distance">Distancia (km)</option>
+            <option value="velocity">Velocidad (km/h)</option>
+          </select>
+        </div>
+
+        <button id="aplicarFiltros">Aplicar</button>
+      </div>
+
+      <div id="resumenKPI" class="kpi-grid"></div>
+
+      <table class="ranking" aria-describedby="ranking">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Favorito</th>
+            <th>Nombre</th>
+            <th>Tamaño máx (km)</th>
+            <th>Velocidad (km/h)</th>
+            <th>Distancia (km)</th>
+            <th>Peligroso</th>
+            <th>Ver detalles</th>
+          </tr>
+        </thead>
+        <tbody id="rankingBody"></tbody>
+      </table>
+    </section>
+  </main>
+
+  <footer class="footer">Datos proporcionados por NASA NeoWs</footer>
+
+  <!-- jQuery -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script type="module" src="js/main.js" defer></script>
+</body>
+</html>
+
